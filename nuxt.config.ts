@@ -4,8 +4,15 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-gtag',
     'nuxt-purgecss',
+    'nuxt-og-image',
+    'nuxt-schema-org',
     'nuxt-link-checker',
+    'nuxt-simple-robots',
+    'nuxt-simple-sitemap',
     'nuxt-delay-hydration',
+  ],
+  extends: [
+    'nuxt-seo-kit'
   ],
   devtools: { enabled: true },
   purgecss: {
