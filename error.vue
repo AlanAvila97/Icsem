@@ -5,7 +5,7 @@
             <div class="container-404">
                 <img src="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/images/404.webp" width="500" height="500">
             </div>
-            <div class="">
+            <div class="d-none">
                 {{ error.statusCode }}
                 {{ error.message }}
             </div>
@@ -16,4 +16,5 @@
 <script setup>
     import '@/assets/css/404.css'
     defineProps({ error: Object });
+    const handleError = () => clearError({ redirect: '/' })
 </script>
