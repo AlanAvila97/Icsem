@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     'nuxt-gtag',
+    'nuxt-icon',
     'nuxt-purgecss',
     'nuxt-og-image',
     'nuxt-schema-org',
