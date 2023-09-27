@@ -9,9 +9,11 @@ export default defineNuxtConfig({
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     'nuxt-delay-hydration',
+    '@pinia/nuxt',
     '@nuxt/image',
+    '@unlazy/nuxt',
     '@nuxtjs/color-mode',
-    '@nuxtjs/google-fonts',
+    '@nuxtjs/google-fonts'
   ],
   extends: [
     'nuxt-seo-kit'
