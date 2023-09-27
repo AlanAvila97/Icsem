@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/image',
     'nuxt-gtag',
     'nuxt-purgecss',
     'nuxt-og-image',
@@ -10,6 +9,9 @@ export default defineNuxtConfig({
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
     'nuxt-delay-hydration',
+    '@nuxt/image',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/google-fonts',
   ],
   extends: [
     'nuxt-seo-kit'
@@ -26,5 +28,8 @@ export default defineNuxtConfig({
   gtag: {
     // id: 'G-XXXXXXXXXX',
     // initialConsent: false
+  },
+  googleFonts: {
+    // Options
   }
 })
