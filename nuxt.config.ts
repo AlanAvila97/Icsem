@@ -12,13 +12,24 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image',
     '@unlazy/nuxt',
+    '@nuxtjs/web-vitals',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts'
+    
   ],
   extends: [
     'nuxt-seo-kit'
   ],
-  devtools: { enabled: true },
+  css:[
+    '@/assets/css/main.css',
+    '@/assets/css/footer.css',
+    'swiper/css',
+    'swiper/css/navigation',
+    'swiper/css/pagination'
+  ],
+  devtools: { 
+    enabled: true 
+  },
   purgecss: {
     enabled: false, // Always enable purgecss
     // safelist: ['my-class'], // Add my-class token to the safelist (e.g. .my-class)
@@ -32,6 +43,11 @@ export default defineNuxtConfig({
     // initialConsent: false
   },
   googleFonts: {
-    // Options
-  }
+    // Options 
+  },
+  webVitals: {
+    // provider: '', // auto detectd
+    debug: true,
+    disabled: false
+  },
 })

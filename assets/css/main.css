@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS 2", Tahoma, sans-serif;
+    z-index: 2;    
+}
+/*-------------------------------------------------------------
+# Clases Globales
+--------------------------------------------------------------*/
+.pt-md-100{
+    padding-top: 100px;
+}
+.pt-md-150{
+    padding-top: 150px;
+}
+.pt-md-200{
+    padding-top: 200px;
+}
+.pb-mb-50{
+    padding-bottom: 50px;
+}
+.pb-mb-100{
+    padding-bottom: 100px;
+}
+.mr-mt-70{
+    padding-top: 70px;
+}
+.pt-md-70{
+    padding-top: 70px;
+}
+.pt-md-90{
+    padding-top: 90px;
+}
+body{
+    background-image: url();
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background: #000;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    /* background: linear-gradient(23deg, rgb(249, 31, 137) 2%, rgb(209, 26, 115) 5%, rgb(134, 17, 73) 8%, rgb(114, 14, 62) 10%, rgb(79, 10, 43) 14%, rgb(0, 0, 0) 20.71%, rgb(0, 0, 0) 68.71%, rgb(114, 14, 62) 80%, rgb(134, 17, 73) 82%, rgb(209, 26, 115) 87%, rgb(249, 31, 137) 92%); */
+}
+#wrapper{
+    background-image: url();
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+#wrapper::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}

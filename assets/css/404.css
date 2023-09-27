@@ -1,0 +1,17 @@
+/*-------------------------------------------------------------
+# Secccion 404
+--------------------------------------------------------------*/
+.section-404 .container-404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0%;
+}
+.section-404 .container-404 img{
+    width: 550px;
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+}
