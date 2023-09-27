@@ -1,16 +1,17 @@
 <template>
-    <div>
-        <h3>Hola </h3>
-        <Icon name="uil:github" color="white" />
-    </div>
+    <main id="wrapper" class=" index">
+        <section class="pt-md-70 section-slider-head">
+            <h1>Home</h1>
+        </section>
+    </main>
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
-    h3{
+    h1{
         color: #fff;
     }
+
 </style>
