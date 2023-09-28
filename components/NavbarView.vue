@@ -1,6 +1,5 @@
 <template>
-    <!-- <RedexsSociales></RedexsSociales> -->
-    <header class="header fixed-header-top header-once">
+    <header class="header fixed-header-top header-once" @scroll="scrollFunction()">
         <div class="container-header">
             <div class="content-menu-hamburguer">
                 <label for="check" class="menuButton">
@@ -10,7 +9,7 @@
                     <span class="bot"></span>
                 </label>    
             </div><!-- End div content menu hamburguer -->
-            <div class="logo">
+            <div class="logo h-100">
                 <nuxt-link to="/">                    
                     <NuxtPicture
                         src="images/logo_icsem.png"
@@ -36,6 +35,11 @@
                         </nuxt-link>
                     </li>
                     <li>   
+                        <nuxt-link to="/color">
+                            color
+                        </nuxt-link>
+                    </li>
+                    <li>   
                         <nuxt-link to="/contactanos">
                             Contactanos
                         </nuxt-link>
@@ -52,7 +56,28 @@
 </template>
 
 <script setup>
+    /**
+     * @description Funcion que da opacidad o da backgound solido al navbar dependiendo de la posición del top de la vista
+    */
+    // window.onscroll = function() {  };
+    import { onMounted } from "vue";
 
+    function scrollFunction() {
+        let mobile = (/iphone|webOS|Windows Phone|iPod|Android|ipad/i.test(navigator.userAgent.toLowerCase()));
+        if(mobile) {
+            document.querySelector('.header').classList.add('top-0')                
+        }else{
+            console.log( document.documentElement.scrollTop );
+            if (document.body.scrollTop > 39 || document.documentElement.scrollTop > 39) {
+                document.querySelector('.header').classList.add('top-0')                
+            } else {
+                document.querySelector('.header').classList.remove('top-0');
+            }
+        }
+    }
+    onMounted(() => {
+        window.onscroll = function() { scrollFunction(); };
+    });
 </script>
 
 <style scoped>
