@@ -5,9 +5,59 @@
     font-family: "Trebuchet MS 2", Tahoma, sans-serif;
     z-index: 2;    
 }
+:root {
+    --catskill-color: #f5f7fa;
+    --iron-color: #d1d6db;
+    --regent-color: #8398a5;
+    --cutty-color: #556b77;
+    --Outer-color: #2a3a41;
+    --green-logo-color: #0d8184;
+    --ch-rem: 1rem;
+}
+body{
+    background-image: url();
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background: var(--iron-color);
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    /* background: linear-gradient(23deg, rgb(249, 31, 137) 2%, rgb(209, 26, 115) 5%, rgb(134, 17, 73) 8%, rgb(114, 14, 62) 10%, rgb(79, 10, 43) 14%, rgb(0, 0, 0) 20.71%, rgb(0, 0, 0) 68.71%, rgb(114, 14, 62) 80%, rgb(134, 17, 73) 82%, rgb(209, 26, 115) 87%, rgb(249, 31, 137) 92%); */
+}
+a{
+    text-decoration: none;
+}
 /*-------------------------------------------------------------
 # Clases Globales
 --------------------------------------------------------------*/
+#wrapper{
+    background-image: url();
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+#wrapper::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
 .pt-md-100{
     padding-top: 100px;
 }
@@ -32,44 +82,10 @@
 .pt-md-90{
     padding-top: 90px;
 }
-#wrapper{
-    background-image: url();
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    height: 100vh;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-}
-#wrapper::after {
-    content: "";
+.fixed-header-top{
     position: fixed;
-    top: 0;
-    height: 100%;
-    left: 0;
+    top: auto;
     right: 0;
-    z-index: -1;
-}
-body{
-    background-image: url();
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    background: #000;
-    height: 100vh;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-}
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    height: 100%;
     left: 0;
-    right: 0;
-    z-index: -1;
-    /* background: linear-gradient(23deg, rgb(249, 31, 137) 2%, rgb(209, 26, 115) 5%, rgb(134, 17, 73) 8%, rgb(114, 14, 62) 10%, rgb(79, 10, 43) 14%, rgb(0, 0, 0) 20.71%, rgb(0, 0, 0) 68.71%, rgb(114, 14, 62) 80%, rgb(134, 17, 73) 82%, rgb(209, 26, 115) 87%, rgb(249, 31, 137) 92%); */
-}
-a{
-    text-decoration: none;
+    z-index: 1030;
 }
