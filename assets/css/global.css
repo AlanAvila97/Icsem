@@ -9,6 +9,8 @@
     width: 100%;
     height: max(320px, 550px);
     /* padding: 0% 2%; */
+    position: relative;
+
 }
 .section-slider-head .container-slider-head .swiper {
     width: 100%;
@@ -20,7 +22,6 @@
     background: #fff;  
     /* Center slide text vertically */
     display: flex;
-    justify-content: center;
     align-items: center;
 }  
 .section-slider-head .container-slider-head .swiper-slide picture {
@@ -56,11 +57,307 @@
     -ms-transform: scale(1);
     -o-transform: scale(1);
 }
+.section-slider-head .container-slider-head .container-info{
+    width: max(300px, 50%);
+    height: max(300px, 70%);
+    position: absolute;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--ch-rem);
+}
+.section-slider-head .container-slider-head .container-info h1{
+    color: var(--white-icon-color);
+    font-size: calc(2rem + 2vh);
+    text-shadow: 0 0 4px black;
+    margin: 0;
+}
+.section-slider-head .container-slider-head .container-info p{
+    color: var(--white-icon-color);
+    font-size: calc(1rem + 1vh);
+    text-shadow: 0 0 4px black;
+}
+.section-slider-head .container-slider-head .container-info .button {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: var(--green-logo-color);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: .75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color .3s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.section-slider-head .container-slider-head .container-info .button-icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--Outer-color);
+    background-color: var(--white-icon-color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.section-slider-head .container-slider-head .button:hover {
+    background-color: var(--Outer-color);
+}
+.section-slider-head .container-slider-head .button:hover .button-icon-wrapper {
+    color: var(--Outer-color);
+}
+.section-slider-head .container-slider-head .follow-hover {
+    position: absolute;
+    transform: translateY(150%);
+    -webkit-transform: translateY(150%);
+    -moz-transform: translateY(150%);
+    -ms-transform: translateY(150%);
+    -o-transform: translateY(150%);
+}
+.section-slider-head .container-slider-head .button:hover .follow {
+    transition: transform .3s ease-in-out;
+    transform: translateY(150%);
+    -webkit-transform: translateY(150%);
+    -moz-transform: translateY(150%);
+    -ms-transform: translateY(150%);
+    -o-transform: translateY(150%);
+}
+.section-slider-head .container-slider-head .button:hover .follow-hover {
+    transition: transform .3s ease-in-out .1s;
+    transform: translateY(0);
+    -webkit-transition: transform .3s ease-in-out .1s;
+    -moz-transition: transform .3s ease-in-out .1s;
+    -ms-transition: transform .3s ease-in-out .1s;
+    -o-transition: transform .3s ease-in-out .1s;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+} 
+/*-------------------------------------------------------------
+# Seccion Mision
+--------------------------------------------------------------*/
+.section-mision .content-mision{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 0rem;
+    background-color: var(--iron-color);
+}
+.section-mision .content-mision .container-img-mision{
+    width: 50%;
+}
+.section-mision .content-mision .container-img-mision picture{
+    width: 100%;
+    height: 100%;
+}
+.section-mision .content-mision .container-img-mision picture img{
+    height: auto;
+    width: 100%;
+    max-height: 480px;
+}
+.section-mision .content-mision .info-mision{
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+.section-mision .content-mision .info-mision small{
+    color: var(--green-logo-color);
+    font-size: calc(0.8rem + 0.5vh);
+    align-self: baseline;
+    font-weight: bold;
+}
+.section-mision .content-mision .info-mision h2{
+    font-size: calc(1.5rem + 2vh);
+    font-weight: bolder;
+}
+.section-mision .content-mision .info-mision p{
+    font-size: calc(0.6rem + 1vh);
+}
+/*-------------------------------------------------------------
+# Seccion Vision
+--------------------------------------------------------------*/
+.section-vision .content-vision{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 0rem;
+    background-color: var(--iron-color);
+}
+.section-vision .content-vision .container-img-vision{
+    width: 50%;
+}
+.section-vision .content-vision .container-img-vision picture{
+    width: 100%;
+    height: 100%;
+}
+.section-vision .content-vision .container-img-vision picture img{
+    height: auto;
+    width: 100%;
+    max-height: 480px;
+}
+.section-vision .content-vision .info-vision{
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+.section-vision .content-vision .info-vision small{
+    color: var(--green-logo-color);
+    font-size: calc(0.8rem + 0.5vh);
+    align-self: baseline;
+    font-weight: bold;
+}
+.section-vision .content-vision .info-vision h2{
+    font-size: calc(1.5rem + 2vh);
+    font-weight: bolder;
+}
+.section-vision .content-vision .info-vision p{
+    font-size: calc(0.6rem + 1vh);
+}
+/*-------------------------------------------------------------
+# Seccion Emails
+--------------------------------------------------------------*/
+.section-emails .content-emails{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+/* .section-emails .content-emails .card-emails{ */
+.section-emails .content-emails .card-emails{
+    width: max(300px, 400px);
+    height: max(300px, 400px);
+    background-color: var(--white-icon-colo);
+    border: 1px solid #0d818491;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.section-emails .content-emails .card-emails:before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, var(--regent-color), var(--regent-color));
+    box-shadow: inset 1px 1px 20px 6px #00000036;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+    z-index: -1;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.section-emails .content-emails .card-emails::after{
+    background: linear-gradient(to bottom right, var(--regent-color), var(--regent-color));
+    box-shadow: inset 1px 1px 20px 6px #00000036;
+    content: "";
+    height: 75%;
+    position: absolute;
+    width: 75%;
+}
+.section-emails .content-emails .card-emails:hover {
+    transform: scale(1.05);
+    border: 1px solid #0d8184;
+}  
+.section-emails .content-emails .card-emails:hover:before {
+    top: 0;
+    left: 0;
+}  
+.section-emails .content-emails .card-emails:hover::after {
+    background: transparent;    
+    box-shadow: inset 1px 1px 20px 6px transparent;
+}  
+.section-emails .content-emails .card-emails .card-content {
+    padding: 20px;
+    text-align: center;
+} 
+.section-emails .content-emails .card-emails .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--white-icon-color);
+}  
+.section-emails .content-emails .card-emails .card-description {
+    font-size: 16px;
+    color: var(--white-icon-color);
+    margin-bottom: 20px;
+}
+.section-emails .content-emails .card-emails .card-button {
+    padding: 10px 20px;
+    background-color: var(--green-logo-color);
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}  
+.section-emails .content-emails .card-emails .card-button:hover {
+    background-color: var(--green-logo-color);
+}  
+.section-emails .content-emails .card-emails .icon-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    background: var(--white-icon-color);
+    border: 1px solid var(--green-logo-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+    padding: 10px;
+}  
+.section-emails .content-emails .card-emails .icon-box span {
+    display: block;
+    text-align: center;
+}  
+.section-emails .content-emails .card-emails .icon-box .month {
+    color: var(--green-logo-color);
+    font-size: 9px;
+    font-weight: 700;
+}  
+.section-emails .content-emails .card-emails .icon-box .icon {    
+    color: var(--green-logo-color);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.section-emails .content-emails .card-emails .icon-box .icon svg{
+    font-size: 2rem;
+    font-weight: 900;
+}
 /*-------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
 @media(max-width: 460){
-    .section-slider-head .container-slider-head .swiper-pagination-bullet {
-
-    }
+    
 }

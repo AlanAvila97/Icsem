@@ -12,13 +12,15 @@
     --cutty-color: #556b77;
     --Outer-color: #2a3a41;
     --green-logo-color: #0d8184;
+    --white-icon-color: #fff;
+    --black-color: #000;
     --ch-rem: 1rem;
 }
 body{
     background-image: url();
     background-size: 100% 100%;
     background-attachment: fixed;
-    background: var(--iron-color);
+    background: var(--catskill-color);
     height: 100vh;
     height: 100%;
     width: 100%;
@@ -81,6 +83,12 @@ a{
 }
 .pt-md-90{
     padding-top: 90px;
+}
+.top-0{
+    top: 0;
+}
+.top-auto{
+    top: auto;
 }
 .fixed-header-top{
     position: fixed;
