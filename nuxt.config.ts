@@ -74,16 +74,19 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/html-validator'
   ],
+  ssr: true,
   extends: [
     'nuxt-seo-kit'
   ],
   css:[
+    'bootstrap/dist/css/bootstrap.min.css',
     '@/assets/css/main.css',
     '@/assets/css/navbar.css',
     '@/assets/css/footer.css',
+    '@/assets/css/global.css',
     'swiper/css',
     'swiper/css/navigation',
-    'swiper/css/pagination'
+    'swiper/css/pagination',
   ],
   devtools: { 
     enabled: true 
@@ -97,6 +100,36 @@ export default defineNuxtConfig({
     debug: process.env.NODE_ENV === 'development',
     mode: 'init',
     replayClick: false,
+  },
+  image: {
+    // domains: ['https://canaloncetv.s3.us-east-1.amazonaws.com'],
+    screens: {
+        xs: 320,
+        sm: 640,
+        md: 768,
+        lg: 1024,
+        xl: 1780,
+        xxl: 1836,
+        '2xl': 1536      
+    },
+    presets: {
+        cover: {
+          modifiers: {
+            fit: "cover",
+            format: "jpg",
+            width: 250,
+            height: 250,
+          },
+        },
+        blog: {
+            modifiers: {
+              format: 'webp',
+              fit: 'cover',
+              quality: '90',
+            }
+        },
+    },
+    
   },
   gtag: {
     // id: 'G-XXXXXXXXXX',
