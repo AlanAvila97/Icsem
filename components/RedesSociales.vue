@@ -5,15 +5,15 @@
             <h2>Ubicacion</h2>
         </div>
         <div class="social-networks d-flex">
-            <a href="/" target="_blank" rel="noopener noreferrer" aria-label="">
+            <nuxt-link to="/" target="_blank" rel="Redireccion Facebook" aria-label="Redireccion Facebook">
                 <Icon name="fa-brands:facebook-f"/>
-            </a>
-            <a href="/" target="_blank" rel="noopener noreferrer" aria-label="">
+            </nuxt-link>
+            <nuxt-link to="/" target="_blank" rel="Redireccion Twitter" aria-label="Redireccion Twitter">
                 <Icon name="fa-brands:twitter"/>
-            </a>
-            <a href="/" target="_blank" rel="noopener noreferrer" aria-label="">
+            </nuxt-link>
+            <nuxt-link to="/" target="_blank" rel="Redireccion Twitter" aria-label="Redireccion Twitter">
                 <Icon name="fa-brands:instagram"/>                
-            </a>
+            </nuxt-link>
         </div>
     </div>
 </template>

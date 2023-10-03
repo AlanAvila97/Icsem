@@ -67,7 +67,6 @@
         if(mobile) {
             document.querySelector('.header').classList.add('top-0')                
         }else{
-            console.log( document.documentElement.scrollTop );
             if (document.body.scrollTop > 39 || document.documentElement.scrollTop > 39) {
                 document.querySelector('.header').classList.add('top-0')                
             } else {
