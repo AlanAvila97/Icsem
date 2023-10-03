@@ -50,12 +50,33 @@ export default defineNuxtConfig({
             // { rel: 'icon', sizes: '192x192', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-192x192.png'},
         ],              
         script: [
+          { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose' },
+        ],
+        noscript: [
         ]
     },
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
-  modules: ['nuxt-gtag', 'nuxt-icon', 'nuxt-purgecss', 'nuxt-og-image', 'nuxt-schema-org', 'nuxt-link-checker', 'nuxt-simple-robots', 'nuxt-simple-sitemap', 'nuxt-delay-hydration', '@pinia/nuxt', '@nuxt/image', '@unlazy/nuxt', '@nuxtjs/web-vitals', '@nuxtjs/color-mode', '@nuxtjs/google-fonts', '@nuxtjs/html-validator', '@nuxtjs/partytown'],
+  modules: [
+    'nuxt-gtag', 
+    'nuxt-icon', 
+    'nuxt-purgecss', 
+    'nuxt-og-image',
+    'nuxt-schema-org',
+    'nuxt-link-checker',
+    'nuxt-simple-robots',
+    'nuxt-simple-sitemap', 
+    'nuxt-delay-hydration', 
+    '@pinia/nuxt', 
+    '@nuxt/image', 
+    '@unlazy/nuxt', 
+    '@nuxtjs/web-vitals', 
+    '@nuxtjs/color-mode', 
+    '@nuxtjs/google-fonts', 
+    '@nuxtjs/html-validator', 
+    '@nuxtjs/partytown',
+  ],
   ssr: true,
   extends: [
     'nuxt-seo-kit'
@@ -72,6 +93,9 @@ export default defineNuxtConfig({
   ],
   devtools: { 
     enabled: true 
+  },
+  partytown: {
+    forward: ['$crisp', '$crisp.push'],
   },
   purgecss: {
     enabled: false, // Always enable purgecss
