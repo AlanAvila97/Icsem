@@ -7,7 +7,11 @@
                     :slidesPerView="1"
                     :spaceBetween="30"
                     :rewind="true"
-                    :grabCursor="true"                  
+                    :grabCursor="true"  
+                    :autoplay="{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }"                  
                     :pagination='{
                         clickable: true,
                         dynamicBullets: true,
@@ -29,9 +33,8 @@
                             fit="cover" 
                             preload
                             :imgAttrs="{
-                                id:'my-id', 
+                                id:'img-1', 
                                 class:'img-fluid', 
-                                style:'display:block', 
                                 alt: 'Image',                                
                                 title: 'Imagen',
                                 'data-my-data': 'my-value'}"/>
@@ -57,9 +60,8 @@
                             fit="cover" 
                             preload
                             :imgAttrs="{
-                                id:'my-id', 
-                                class:'my-class', 
-                                style:'display:block', 
+                                id:'img-1', 
+                                class:'img-fluid', 
                                 alt: 'Image',                                
                                 title: 'Imagen',
                                 'data-my-data': 'my-value'}"/>
@@ -89,9 +91,8 @@
                             fit="cover" 
                             preload
                             :imgAttrs="{
-                                id:'my-id', 
-                                class:'my-class', 
-                                style:'display:block', 
+                                id:'img-1', 
+                                class:'img-fluid', 
                                 alt: 'Image',                                
                                 title: 'Imagen',
                                 'data-my-data': 'my-value'}"/>
@@ -110,9 +111,69 @@
                 </swiper>
            </div>
         </section>
-        <section class="section-mision">
-            <div class="content-mision">
-                <div class="container-img-mision">
+        <section class="section-values">
+            <div class="container-values d-flex">
+                <div class="item-values d-flex">
+                    <div class="title-values d-flex">                        
+                        <div class="icon-values">
+                            <Icon name="material-symbols:award-star" size='1.5rem'/>
+                        </div>
+                        <h2>Primer Valor</h2>
+                    </div>
+                    <div class="info-values">
+                        <p>
+
+                            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit
+                        </p> 
+                    </div>
+                </div>
+                <div class="item-values d-flex">
+                    <div class="title-values d-flex">                        
+                        <div class="icon-values">
+                            <Icon name="material-symbols:award-star" size='1.5rem'/>
+                        </div>
+                        <h2>Segundo Valor</h2>
+                    </div>
+                    <div class="info-values">
+                        <p>
+
+                            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit
+                        </p> 
+                    </div>
+                </div>
+                <div class="item-values d-flex">
+                    <div class="title-values d-flex">                        
+                        <div class="icon-values">
+                            <Icon name="material-symbols:award-star" size='1.5rem'/>
+                        </div>
+                        <h2>Tercer Valor</h2>
+                    </div>
+                    <div class="info-values">
+                        <p>
+
+                            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit
+                        </p> 
+                    </div>
+                </div>
+                <div class="item-values d-flex">
+                    <div class="title-values d-flex">                        
+                        <div class="icon-values">
+                            <Icon name="material-symbols:award-star" size='1.5rem'/>
+                        </div>
+                        <h2>Cuarto Valor</h2>
+                    </div>
+                    <div class="info-values">
+                        <p>
+
+                            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-us">
+            <div class="content-us">
+                <div class="container-img-us">
                     <!-- <img class="img-fluid" src="images/about.jpg" alt="" srcset=""> -->
                     <NuxtPicture
                         src="images/about-2.jpg"
@@ -123,15 +184,15 @@
                         fit="cover" 
                         preload
                         :imgAttrs="{
-                            id:'my-id', 
+                            id:'img-us', 
                             class:'img-fluid ', 
                             style:'display:block', 
                             alt: 'Image',                                
                             title: 'Imagen',
                             'data-my-data': 'my-value'}"/>
                 </div>
-                <div class="info-mision d-flex">
-                    <small>Mision</small>
+                <div class="info-us d-flex">
+                    <small>¿Quiénes Somos?</small>
                     <h2>Más de 25 años de experiencia dando servicios</h2>
                     <p>
                         Era hora de deshacerse de las enredaderas. Oh Dios, que sea el dolor de Dios. 
@@ -142,69 +203,180 @@
                 </div>
             </div>
         </section>
-        <section class="section-emails">
-            <div class="content-emails">
-                <div class="card-emails">
-                    <div class="card-content">
-                        <div class="card-title">Cool Card</div>
-                        <p class="card-description">This is a cool card design.</p>
-                        <button class="card-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Click Me</button>
-                    </div>
-                    <div class="icon-box">
-                        <span class="icon d-flex">
-                            <Icon name="material-symbols:contact-mail"/>
-                        </span>
-                    </div>
+        <section class="section-products-services">
+            <div class="container-products-services d-flex">
+                <div class="title-products-services w-100 d-flex">
+                    <h2>Titulo Productos Servicios</h2>
                 </div>
-                <div class="card-emails">
-                    <div class="card-content">
-                        <div class="card-title">Cool Card</div>
-                        <p class="card-description">This is a cool card design.</p>
-                        <button class="card-button">Click Me</button>
-                    </div>
-                    <div class="icon-box">
-                        <span class="icon d-flex">
-                            <Icon name="material-symbols:contact-mail"/>
-                        </span>
-                    </div>
-                </div>
-                <div class="card-emails">
-                    <div class="card-content">
-                        <div class="card-title">Cool Card</div>
-                        <p class="card-description">This is a cool card design.</p>
-                        <button class="card-button">Click Me</button>
-                    </div>
-                    <div class="icon-box">
-                        <span class="icon d-flex">
-                            <Icon name="material-symbols:contact-mail"/>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="form-contactanos">
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Button with data-target
-                </button>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </div>
+                <div class="content-items-products-services d-grid w-100">
+                    <nuxt-link to="/" class="items-products-services d-flex" aria-label="Redirección">
+                        <div class="visuals-products-services">
+                            <NuxtPicture
+                                src="images/img-600x400-3.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                        </div> 
+                        <div class="info-products-services">
+                            <div class="image-item">
+                                <NuxtPicture
+                                src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                            </div>
+                            <h2>Producto 1</h2>
+                            <p class="sinopsis">
+                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                            </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>    
+                        </div>   
+                    </nuxt-link>
+                    <nuxt-link to="/" class="items-products-services" aria-label="Redirección">
+                        <div class="visuals-products-services">
+                            <NuxtPicture
+                                src="images/img-600x400-4.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>
+                        </div>    
+                        <div class="info-products-services">
+                            <div class="image-item">
+                                <NuxtPicture
+                                src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                            </div>
+                            <h2>Producto 2</h2>
+                            <p class="sinopsis">
+                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                            </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>    
+                        </div>    
+                    </nuxt-link>
+                    <nuxt-link to="/" class="items-products-services" aria-label="Redirección">
+                        <div class="visuals-products-services">
+                            <NuxtPicture
+                                src="images/img-600x400-5.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>                                       
+                        </div>    
+                        <div class="info-products-services">
+                            <div class="image-item">
+                                <NuxtPicture
+                                src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                            </div>
+                            <h2>Producto 3</h2>
+                            <p class="sinopsis">
+                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                            </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>                            
+                        </div>  
+                    </nuxt-link>
                 </div>
             </div>
         </section>
-        <section class="section-vision">
-            <div class="content-vision">
-                <div class="info-vision d-flex">
-                    <small>Visión</small>
-                    <h2>Más de 25 años de experiencia dando servicios</h2>
+        <section class="section-post-sell">
+            <div class="container-post-sell">
+                <div class="info-post-sell d-flex">
+                    <small>Servicios Post Venta</small>
+                    <h2 class="title-post-sell">Más de 25 años de experiencia dando servicios</h2>
                     <p>
                         Era hora de deshacerse de las enredaderas. Oh Dios, que sea el dolor de Dios. 
                         Algún patio trasero será el patio trasero y ellos. Era una clita en sí misma e Internet y lo era, 
                         pero si era un sitio web o una clita eran solo dos cosas.
                     </p>
-                    <div class="list-items"></div>
+                    <div class="items-post-sell d-grid">
+                        <div class="item">
+                            <Icon name="uil:github" size="3rem"/>
+                            <h2 class="title-item">Primer Post</h2>
+                        </div>
+                        <div class="item">
+                            <Icon name="uil:github" size="3rem"/>
+                            <h2 class="title-item">Segunda Post</h2>
+                        </div>
+                        <div class="item">
+                            <Icon name="uil:github" size="3rem"/>
+                            <h2 class="title-item">Tercer Post</h2>
+                        </div>
+                        <div class="item">
+                            <Icon name="uil:github" size="3rem"/>
+                            <h2 class="title-item">Cuarto Post</h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="container-img-vision">
+                <div class="container-img-post-sell">
                     <NuxtPicture
                         src="images/Vision_G.jpg"
                         densities="x1 x2"
@@ -223,6 +395,117 @@
                 </div>
             </div> 
         </section>
+        <section class="section-emails">        
+            <div class="container-emails d-flex">
+                <div class="title-emails w-100 d-flex">
+                    <h2>Contactanos</h2>
+                </div>
+                <div class="card-emails">
+                    <div class="card-content">
+                        <div class="card-title">Cool Card</div>
+                        <p class="card-description">This is a cool card design.</p>
+                        <p class="mail">demo@prueba.com</p>
+                        <button class="card-button" type="button" data-bs-toggle="collapse" data-bs-target="#ContainerForm" aria-expanded="false" aria-controls="ContainerForm">Click Me</button>
+                    </div>
+                    <div class="icon-box">
+                        <span class="icon d-flex">
+                            <Icon name="material-symbols:contact-mail"/>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-emails">
+                    <div class="card-content">
+                        <div class="card-title">Cool Card</div>
+                        <p class="card-description">This is a cool card design.</p>
+                        <p class="mail">demo@prueba.com</p>
+                        <button class="card-button">Click Me</button>
+                    </div>
+                    <div class="icon-box">
+                        <span class="icon d-flex">
+                            <Icon name="material-symbols:contact-mail"/>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-emails">
+                    <div class="card-content">
+                        <div class="card-title">Cool Card</div>
+                        <p class="card-description">This is a cool card design.</p>
+                        <p class="mail">demo@prueba.com</p>
+                        <button class="card-button">Click Me</button>
+                    </div>
+                    <div class="icon-box">
+                        <span class="icon d-flex">
+                            <Icon name="material-symbols:contact-mail"/>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-contactanos">
+                <div class="collapse" id="ContainerForm">
+                    <div class="container-contact d-flex">
+                        <div class="image-contact">
+                            <NuxtPicture
+                                src="images/conctanos.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-contactanos', 
+                                    class:'img-fluid ', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>
+                        </div>
+                        <div class="info-contact d-flex">
+                            <form class="form-contact">
+                                <p class="title">Register </p>
+                                <p class="message">Signup now and get full access to our app. </p>
+                                <div class="flex">
+                                    <label>
+                                        <input required="" placeholder="" type="text" class="input">
+                                        <span>Firstname</span>
+                                    </label>
+                            
+                                    <label>
+                                        <input required="" placeholder="" type="text" class="input">
+                                        <span>Lastname</span>
+                                    </label>
+                                </div>  
+                                <label>
+                                    <input required="" placeholder="" type="email" class="input">
+                                    <span>Email</span>
+                                </label> 
+                                <label>
+                                    <input required="" placeholder="" type="password" class="input">
+                                    <span>Password</span>
+                                </label>
+                                <label>
+                                    <input required="" placeholder="" type="password" class="input">
+                                    <span>Confirm password</span>
+                                </label>
+                                <button class="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>  
+                </div>
+                  <!-- <div class="row">
+                    <div class="col">
+                      
+                    </div>
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                          Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+        </section>
     </main>
 </template>
 
@@ -232,11 +515,9 @@
     // Import Swiper Vue.js components
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import { Pagination, Navigation, Mousewheel, Autoplay } from 'swiper/modules';
-    // import 'bootstrap/dist/js/bootstrap.min.js'
-
     // 
     const modules =  [Navigation, Pagination, Mousewheel, Autoplay];
-
+    // 
 </script>
 
 <style scoped>

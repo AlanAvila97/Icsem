@@ -75,7 +75,7 @@
 }
 .section-slider-head .container-slider-head .container-info p{
     color: var(--white-icon-color);
-    font-size: calc(1rem + 1vh);
+    font-size: calc(0.7rem + 1vh);
     text-shadow: 0 0 4px black;
 }
 .section-slider-head .container-slider-head .container-info .button {
@@ -146,103 +146,178 @@
     -o-transform: translateY(0);
 } 
 /*-------------------------------------------------------------
-# Seccion Mision
+# Seccion Valores
 --------------------------------------------------------------*/
-.section-mision .content-mision{
+.section-values{
+    padding: 2rem;
+}
+.section-values .container-values{
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    /* background-color: var(--iron-color); */
+}
+.section-values .container-values .item-values{
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem;
+}
+.section-values .container-values .item-values .title-values{
+    align-items: center;
+    gap: 1rem;
+}
+.section-values .container-values .item-values .title-values .icon-values{
+    background-color: #0d8184;
+    clip-path: circle(45% at 50% 50%);
+    padding: 1rem;
+}
+.section-values .container-values .item-values .title-values .icon-values svg{
+    color: var(--white-icon-color);
+}
+.section-values .container-values .item-values .title-values h2{
+    color: var(--Outer-color);
+    font-size: calc(1.5rem + 1vh);
+    font-weight: bold;
+    margin: 0;
+}
+.section-values .container-values .item-values .info-values p{
+    color: var(--scorpio-color);
+    font-size: calc(0.8rem + 0.5vh);
+    margin: 0;
+}
+/*-------------------------------------------------------------
+# Seccion Quienes Somos
+--------------------------------------------------------------*/
+.section-us .content-us{
     height: 100%;
     width: 100%;
     display: flex;
     padding: 0rem;
     background-color: var(--iron-color);
 }
-.section-mision .content-mision .container-img-mision{
+.section-us .content-us .container-img-us{
     width: 50%;
 }
-.section-mision .content-mision .container-img-mision picture{
+.section-us .content-us .container-img-us picture{
     width: 100%;
     height: 100%;
 }
-.section-mision .content-mision .container-img-mision picture img{
+.section-us .content-us .container-img-us picture img{
     height: auto;
     width: 100%;
     max-height: 480px;
 }
-.section-mision .content-mision .info-mision{
+.section-us .content-us .info-us{
     width: 50%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem;
 }
-.section-mision .content-mision .info-mision small{
+.section-us .content-us .info-us small{
     color: var(--green-logo-color);
-    font-size: calc(0.8rem + 0.5vh);
+    font-size: calc(1rem + 0.5vh);
     align-self: baseline;
     font-weight: bold;
 }
-.section-mision .content-mision .info-mision h2{
+.section-us .content-us .info-us h2{
+    color: var(--Outer-color);
     font-size: calc(1.5rem + 2vh);
     font-weight: bolder;
+    margin-bottom: 1rem;
 }
-.section-mision .content-mision .info-mision p{
+.section-us .content-us .info-us p{
+    color: var(--Outer-color);
     font-size: calc(0.6rem + 1vh);
 }
 /*-------------------------------------------------------------
-# Seccion Vision
+# Seccion Post Ventas
 --------------------------------------------------------------*/
-.section-vision .content-vision{
+.section-post-sell .container-post-sell{
     height: 100%;
     width: 100%;
     display: flex;
     padding: 0rem;
     background-color: var(--iron-color);
 }
-.section-vision .content-vision .container-img-vision{
+.section-post-sell .container-post-sell .container-img-post-sell{
     width: 50%;
 }
-.section-vision .content-vision .container-img-vision picture{
+.section-post-sell .container-post-sell .container-img-post-sell picture{
     width: 100%;
     height: 100%;
 }
-.section-vision .content-vision .container-img-vision picture img{
+.section-post-sell .container-post-sell .container-img-post-sell picture img{
     height: auto;
     width: 100%;
     max-height: 480px;
 }
-.section-vision .content-vision .info-vision{
+.section-post-sell .container-post-sell .info-post-sell{
     width: 50%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+    padding: 3rem 5rem;
 }
-.section-vision .content-vision .info-vision small{
+.section-post-sell .container-post-sell .info-post-sell small{
     color: var(--green-logo-color);
-    font-size: calc(0.8rem + 0.5vh);
+    font-size: calc(1rem + 0.5vh);
     align-self: baseline;
     font-weight: bold;
 }
-.section-vision .content-vision .info-vision h2{
+.section-post-sell .container-post-sell .info-post-sell .title-post-sell{
+    color: var(--Outer-color);
     font-size: calc(1.5rem + 2vh);
     font-weight: bolder;
 }
-.section-vision .content-vision .info-vision p{
+.section-post-sell .container-post-sell .info-post-sell p{
+    color: var(--Outer-color);
     font-size: calc(0.6rem + 1vh);
+}
+.section-post-sell .container-post-sell .info-post-sell .items-post-sell{
+    width: 100%;
+    grid-template-columns: repeat(2,minmax(300px,1fr));
+    grid-template-rows: repeat(2,minmax(80px,1fr));
+}
+.section-post-sell .container-post-sell .info-post-sell .items-post-sell .item{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+.section-post-sell .container-post-sell .info-post-sell .items-post-sell .item svg{
+    color: var(--green-logo-color);
+}
+.section-post-sell .container-post-sell .info-post-sell .items-post-sell .title-item{
+    color: var(--Outer-color);
+    font-size: calc(1rem + 1vh);
+    font-weight: bolder;
+    margin: 0;
 }
 /*-------------------------------------------------------------
 # Seccion Emails
 --------------------------------------------------------------*/
-.section-emails .content-emails{
+.section-emails .container-emails{
     height: 100%;
     width: 100%;
-    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 2rem;
 }
-/* .section-emails .content-emails .card-emails{ */
-.section-emails .content-emails .card-emails{
-    width: max(300px, 400px);
-    height: max(300px, 400px);
+.section-emails .container-emails .title-emails{
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+.section-emails .container-emails .title-emails h2{
+    color: var(--Outer-color);
+    font-size: calc(2rem + 1vh);
+    font-weight: bold;
+    margin: 0;
+}
+.section-emails .container-emails .card-emails{
+    width: max(300px, 450px);
+    height: max(300px, 500px);
     background-color: var(--white-icon-colo);
     border: 1px solid #0d818491;
     border-radius: 10px;
@@ -255,7 +330,7 @@
     position: relative;
     transition: all 0.3s ease;
 }
-.section-emails .content-emails .card-emails:before {
+.section-emails .container-emails .card-emails:before {
     content: "";
     position: absolute;
     top: -100%;
@@ -276,42 +351,48 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
-.section-emails .content-emails .card-emails::after{
+.section-emails .container-emails .card-emails::after{
     background: linear-gradient(to bottom right, var(--regent-color), var(--regent-color));
     box-shadow: inset 1px 1px 20px 6px #00000036;
     content: "";
-    height: 75%;
+    height: 80%;
+    width: 80%;
     position: absolute;
-    width: 75%;
 }
-.section-emails .content-emails .card-emails:hover {
+.section-emails .container-emails .card-emails:hover {
     transform: scale(1.05);
     border: 1px solid #0d8184;
 }  
-.section-emails .content-emails .card-emails:hover:before {
+.section-emails .container-emails .card-emails:hover:before {
     top: 0;
     left: 0;
 }  
-.section-emails .content-emails .card-emails:hover::after {
+.section-emails .container-emails .card-emails:hover::after {
     background: transparent;    
     box-shadow: inset 1px 1px 20px 6px transparent;
 }  
-.section-emails .content-emails .card-emails .card-content {
-    padding: 20px;
+.section-emails .container-emails .card-emails .card-content {
+    padding: 1rem;
     text-align: center;
 } 
-.section-emails .content-emails .card-emails .card-title {
-    font-size: 24px;
+.section-emails .container-emails .card-emails .card-title {
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 10px;
     color: var(--white-icon-color);
 }  
-.section-emails .content-emails .card-emails .card-description {
-    font-size: 16px;
-    color: var(--white-icon-color);
-    margin-bottom: 20px;
+.section-emails .container-emails .card-emails .card-content p {
+    margin: 0;
 }
-.section-emails .content-emails .card-emails .card-button {
+.section-emails .container-emails .card-emails .card-description {
+    font-size: 1rem;
+    color: var(--white-icon-color);
+}
+.section-emails .container-emails .card-emails .mail{
+    font-size: 1rem;
+    color: var(--white-icon-color);
+    padding-bottom: 2rem;
+}   
+.section-emails .container-emails .card-emails .card-button {
     padding: 10px 20px;
     background-color: var(--green-logo-color);
     color: #FFF;
@@ -321,10 +402,10 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }  
-.section-emails .content-emails .card-emails .card-button:hover {
+.section-emails .container-emails .card-emails .card-button:hover {
     background-color: var(--green-logo-color);
 }  
-.section-emails .content-emails .card-emails .icon-box {
+.section-emails .container-emails .card-emails .icon-box {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -335,29 +416,310 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
     padding: 10px;
 }  
-.section-emails .content-emails .card-emails .icon-box span {
+.section-emails .container-emails .card-emails .icon-box span {
     display: block;
     text-align: center;
 }  
-.section-emails .content-emails .card-emails .icon-box .month {
+.section-emails .container-emails .card-emails .icon-box .month {
     color: var(--green-logo-color);
     font-size: 9px;
     font-weight: 700;
 }  
-.section-emails .content-emails .card-emails .icon-box .icon {    
+.section-emails .container-emails .card-emails .icon-box .icon {    
     color: var(--green-logo-color);
     width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
 }
-.section-emails .content-emails .card-emails .icon-box .icon svg{
+.section-emails .container-emails .card-emails .icon-box .icon svg{
     font-size: 2rem;
     font-weight: 900;
 }
+/*-------------------------------------------------------------
+# Seccion Formulario Contactanos
+--------------------------------------------------------------*/
+.section-emails .form-contactanos{
+    width: 100%;
+    height: auto;
+    padding: 0rem;
+    background-color: var(--iron-color);
+}
+.section-emails .form-contactanos .container-contact{
+    width: 100%;
+    height: 100%;
+}
+.section-emails .form-contactanos .container-contact .image-contact{
+    width: 50%;
+}
+.section-emails .form-contactanos .container-contact .image-contact picture{
+    width: 100%;
+    height: 100%;
+}
+.section-emails .form-contactanos .container-contact .image-contact picture img{
+    height: auto;
+    width: 100%;
+    max-height: 520px;
+}
+.section-emails .form-contactanos .container-contact .info-contact{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background: var(--iron-color);
+}
+.section-emails .form-contactanos .container-contact .form-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: max(300px, 90%);
+    background-color: var(--white-icon-color);
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+}
+.section-emails .form-contactanos .container-contact .form-contact .title {
+    font-size: 28px;
+    color: var(--green-logo-color);
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.section-emails .form-contactanos .container-contact .form-contact .title::before,
+.section-emails .form-contactanos .container-contact .form-contact .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--green-logo-color);
+}  
+.section-emails .form-contactanos .container-contact .form-contact .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: var(--green-logo-color);
+}
+.section-emails .form-contactanos .container-contact .form-contact .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+.section-emails .form-contactanos .container-contact .form-contact .message, 
+.section-emails .form-contactanos .container-contact .form-contact .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+} 
+.section-emails .form-contactanos .container-contact .form-contact .signin {
+    text-align: center;
+}
+.section-emails .form-contactanos .container-contact .form-contact .signin a {
+    color: var(--green-logo-color);
+}  
+.section-emails .form-contactanos .container-contact .form-contact .signin a:hover {
+    text-decoration: underline var(--green-logo-color);
+}
+.section-emails .form-contactanos .container-contact .form-contact .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}  
+.section-emails .form-contactanos .container-contact .form-contact label {
+    position: relative;
+}  
+.section-emails .form-contactanos .container-contact .form-contact label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}  
+.section-emails .form-contactanos .container-contact .form-contact label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}  
+.section-emails .form-contactanos .container-contact .form-contact label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}  
+.section-emails .form-contactanos .container-contact .form-contact label .input:focus + span,
+.section-emails .form-contactanos .container-contact .form-contact label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}  
+.section-emails .form-contactanos .container-contact .form-contact label .input:valid + span {
+    color: green;
+}
+.section-emails .form-contactanos .container-contact .form-contact .submit {
+    border: none;
+    outline: none;
+    background-color: var(--green-logo-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+}
+.section-emails .form-contactanos .container-contact .form-contact .submit:hover {
+    background-color: var(--green-logo-color);
+}
+/*-------------------------------------------------------------
+# Seccion Productos Servicios
+--------------------------------------------------------------*/
+.section-products-services{
+
+}
+.section-products-services .container-products-services{
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+.section-products-services .container-products-services .title-products-services{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.section-products-services .container-products-services .title-products-services h2{
+    color: var(--Outer-color);
+    font-size: calc(2rem + 1vh);
+    font-weight: bold;
+    margin: 0;
+}
+.section-products-services .container-products-services .content-items-products-services{
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    justify-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+}
+.section-products-services .container-products-services .content-items-products-services .items-products-services{
+    color: var(--Outer-color);
+    border: 1px solid #0d8184;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+    max-width: 400px;
+}
+.section-products-services .container-products-services .content-items-products-services .items-products-services:hover .info-products-services .image-item{
+    background: var(--green-logo-color);
+    border: 1px solid var(--white-icon-color);
+    box-shadow: 0 0 9px 0px var(--Outer-color);
+}
+.section-products-services .container-products-services .content-items-products-services .items-products-services:hover .info-products-services .image-item img{
+    filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
+}
+.section-products-services .container-products-services .content-items-products-services .items-products-services .visuals-products-services{
+    height: auto;
+    width: 100%;
+    position: relative;    
+    overflow: hidden;
+}
+.section-products-services .container-products-services .items-products-services .visuals-products-services::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(45deg) translateX(600px);
+    transition: 0.8s;
+    -webkit-transform: skewX(45deg) translateX(600px);
+    -moz-transform: skewX(45deg) translateX(600px);
+    -ms-transform: skewX(45deg) translateX(600px);
+    -o-transform: skewX(45deg) translateX(600px);
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+}
+.section-products-services .container-products-services .items-products-services:hover .visuals-products-services::before{
+    transform: skewX(45deg) translateX(-600px);
+    -webkit-transform: skewX(45deg) translateX(-600px);
+    -moz-transform: skewX(45deg) translateX(-600px);
+    -ms-transform: skewX(45deg) translateX(-600px);
+    -o-transform: skewX(45deg) translateX(-600px);
+}
+.section-products-services .container-products-services .content-items-products-services .items-products-services 
+.visuals-products-services .bg-products-services{
+    height: auto;
+    width: 100%;
+    max-height: 270px;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;    
+}
+.section-products-services .container-products-services .items-products-services .info-products-services{
+    padding: 0rem 2rem 2rem 2rem;
+}
+.section-products-services .container-products-services .info-products-services .image-item{
+    position: relative;
+    margin: -50px 0 1rem 0;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    background: var(--white-icon-color);
+    border: 1px solid var(--green-logo-color);
+    border-radius: 5rem;
+    box-shadow: 0 0 9px 0px var(--green-logo-color);
+    transition: .5s;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+.section-products-services .container-products-services .info-products-services .image-item picture{
+    height: auto;
+    width: auto;
+}
+.section-products-services .container-products-services .info-products-services .image-item picture img{
+    width: 80px;
+    max-height: 80px;
+}
+.section-products-services .container-products-services .info-products-services h2{
+    color: var(--Outer-color);
+    font-size: calc(1rem + 1vh);
+    font-weight: bold;
+}
+.section-products-services .container-products-services .info-products-services .sinopsis{
+    color: var(--Outer-color);
+    font-size: calc(0.5rem + 1vh);
+}
+.section-products-services .container-products-services .info-products-services .redirect{
+    color: var(--green-logo-color);
+    font-size: calc(0.5rem + 1vh);
+}
+
 /*-------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
 @media(max-width: 460){
     
 }
+/*-------------------------------------------------------------
+# Animaciones
+--------------------------------------------------------------*/
+@keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
