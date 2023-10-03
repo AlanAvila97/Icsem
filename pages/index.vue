@@ -1,5 +1,5 @@
 <template>
-    <main id="wrapper" class=" index">
+    <main id="wrapper" class="index">
         <section class="pt-md-70 section-slider-head">
            <div class="container-slider-head">
                 <swiper 
@@ -112,6 +112,9 @@
            </div>
         </section>
         <section class="section-values">
+            <div class="title-value d-flex">
+                <h2>Nuestros Valores</h2>
+            </div>
             <div class="container-values d-flex">
                 <div class="item-values d-flex">
                     <div class="title-values d-flex">                        
@@ -220,7 +223,7 @@
                                 fit="cover" 
                                 preload
                                 :imgAttrs="{
-                                    id:'img-us', 
+                                    id:'img-us-1', 
                                     class:'img-fluid bg-products-services', 
                                     style:'display:block', 
                                     alt: 'Image',                                
@@ -238,7 +241,7 @@
                                 fit="cover" 
                                 preload
                                 :imgAttrs="{
-                                    id:'img-us', 
+                                    id:'img-us-2', 
                                     class:'img-fluid bg-products-services', 
                                     style:'display:block', 
                                     alt: 'Image',                                
@@ -265,7 +268,7 @@
                                 fit="cover" 
                                 preload
                                 :imgAttrs="{
-                                    id:'img-us', 
+                                    id:'img-us-3', 
                                     class:'img-fluid bg-products-services', 
                                     style:'display:block', 
                                     alt: 'Image',                                
@@ -283,7 +286,7 @@
                                 fit="cover" 
                                 preload
                                 :imgAttrs="{
-                                    id:'img-us', 
+                                    id:'img-us-4', 
                                     class:'img-fluid bg-products-services', 
                                     style:'display:block', 
                                     alt: 'Image',                                
@@ -310,7 +313,7 @@
                                 fit="cover" 
                                 preload
                                 :imgAttrs="{
-                                    id:'img-us', 
+                                    id:'img-us-5', 
                                     class:'img-fluid bg-products-services', 
                                     style:'display:block', 
                                     alt: 'Image',                                
@@ -328,7 +331,7 @@
                                 fit="cover" 
                                 preload
                                 :imgAttrs="{
-                                    id:'img-us', 
+                                    id:'img-us-6', 
                                     class:'img-fluid bg-products-services', 
                                     style:'display:block', 
                                     alt: 'Image',                                
@@ -405,7 +408,7 @@
                         <div class="card-title">Cool Card</div>
                         <p class="card-description">This is a cool card design.</p>
                         <p class="mail">demo@prueba.com</p>
-                        <button class="card-button" type="button" data-bs-toggle="collapse" data-bs-target="#ContainerForm" aria-expanded="false" aria-controls="ContainerForm">Click Me</button>
+                        <button class="card-button" type="button" @click="clickScroll" data-bs-toggle="collapse" data-bs-target="#ContainerForm" aria-expanded="false" aria-controls="ContainerForm">Click Me</button>
                     </div>
                     <div class="icon-box">
                         <span class="icon d-flex">
@@ -491,19 +494,106 @@
                             </form>
                         </div>
                     </div>  
+                </div>                              
+            </div>
+        </section>
+        <section class="section-experience">
+            <div class="container-experience d-flex">
+                <div class="title-experience d-flex">
+                    <h2>Titulo de Experiencia</h2>                    
                 </div>
-                  <!-- <div class="row">
-                    <div class="col">
-                      
-                    </div>
-                    <div class="col">
-                      <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <div class="card card-body">
-                          Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                <div class="content-items-experience">
+                    <nuxt-link to="/" class="items-experience d-flex" arial-label="">                        
+                        <div class="visual-experience">
+                            <NuxtPicture
+                                src="images/img-600x400-3.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-experience-1', 
+                                    class:'img-fluid ', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                        </div>                        
+                        <div class="info-experience">
+                            <div class="content-title">
+                                <h2>Empresa</h2>
+                            </div>  
+                            <h3>Subtitulo</h3>
+                            <p class="sinopsis">
+                                We Are pioneers of solar & renewable energy industry
+                            </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>  
                         </div>
-                      </div>
-                    </div>
-                  </div> -->
+                    </nuxt-link>
+                    <nuxt-link to="/" class="items-experience d-flex">
+                        <div class="visual-experience">
+                            <NuxtPicture
+                                src="images/img-600x400-4.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-experience-2', 
+                                    class:'img-fluid ', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                        </div>                        
+                        <div class="info-experience">
+                            <div class="content-title">
+                                <h2>Empresa</h2>
+                            </div>  
+                            <h3>Subtitulo</h3>
+                            <p class="sinopsis">
+                                We Are pioneers of solar & renewable energy industry
+                            </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>  
+                        </div>
+                    </nuxt-link>
+                    <nuxt-link to="/" class="items-experience d-flex">
+                        <div class="visual-experience">
+                            <NuxtPicture
+                                src="images/img-600x400-5.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-experience-3', 
+                                    class:'img-fluid ', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                        </div>                        
+                        <div class="info-experience">
+                            <div class="content-title">
+                                <h2>Empresa</h2>
+                            </div>  
+                            <h3>Subtitulo</h3>
+                            <p class="sinopsis">
+                                We Are pioneers of solar & renewable energy industry
+                            </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>  
+                        </div>
+                    </nuxt-link>
+                </div>
             </div>
         </section>
     </main>
