@@ -45,27 +45,15 @@
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/contactanos">
+                        <div class="scroll-element scroll-contactanos" data-element="Contactanos" @click="clickScrollElementsIndex">
                             Contactanos
-                        </nuxt-link>
+                        </div>
                     </li>
                     <li>   
-                        <nuxt-link to="/experiencia">
+                        <div class="scroll-element scroll-experiencia" data-element="Experiencias" @click="clickScrollElementsIndex">
                             Experiencia
-                        </nuxt-link>
+                        </div>
                     </li>
-                    <!-- <li>   
-                        <nuxt-link to="/delay">
-                            Delay
-                        </nuxt-link>
-                    </li>
-                    <li>   
-                        <nuxt-link to="/color">
-                            color
-                        </nuxt-link>
-                    </li>
-
- -->
                 </ul>
             </div><!-- End div sections nav -->
         </div>
@@ -73,12 +61,20 @@
 </template>
 
 <script setup>
+    // vue router
+    import { useRoute, useRouter } from "vue-router";
+    // Global Data (Pinia)
+    import {dataGlobal} from '@/store/globalData'
+    // 
+    const DataGlobal = dataGlobal();   
+    const router = useRouter();
+    // 
+    const { getElement, scrollSection } = DataGlobal; 
     /**
      * @description Funcion que da opacidad o da backgound solido al navbar dependiendo de la posición del top de la vista
     */
     // window.onscroll = function() {  };
     import { onMounted } from "vue";
-
     function scrollFunction() {
         let mobile = (/iphone|webOS|Windows Phone|iPod|Android|ipad/i.test(navigator.userAgent.toLowerCase()));
         if(mobile) {
@@ -89,6 +85,18 @@
             } else {
                 document.querySelector('.header').classList.remove('top-0');
             }
+        }
+    }
+    /**
+        * @description Funcion que hace un scroll al dar click a un elemento del nabvar (blog, podcast)
+    */
+    const clickScrollElementsIndex = (e) => {
+        let element = e.target.dataset.element;
+        let page = document.querySelector('main.index');
+        if(page == null){                        
+            router.push("/#"+element);
+        }else{
+            scrollSection(getElement('#'+element), 70);
         }
     }
     onMounted(() => {
