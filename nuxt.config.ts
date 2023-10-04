@@ -65,8 +65,7 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'nuxt-schema-org',
     'nuxt-link-checker',
-    'nuxt-simple-robots',
-    'nuxt-simple-sitemap', 
+    // 'nuxt-simple-robots',
     'nuxt-delay-hydration', 
     '@pinia/nuxt', 
     '@nuxt/image', 
@@ -74,7 +73,7 @@ export default defineNuxtConfig({
     '@nuxtjs/web-vitals', 
     '@nuxtjs/color-mode', 
     '@nuxtjs/google-fonts', 
-    '@nuxtjs/html-validator', 
+    // '@nuxtjs/html-validator', 
     '@nuxtjs/partytown',
   ],
   ssr: true,
@@ -102,7 +101,6 @@ export default defineNuxtConfig({
     // safelist: ['my-class'], // Add my-class token to the safelist (e.g. .my-class)
   },
   delayHydration: {
-    // enables nuxt-delay-hydration in dev mode for testing
     debug: process.env.NODE_ENV === 'development',
     mode: 'init',
     replayClick: false,
@@ -149,30 +147,30 @@ export default defineNuxtConfig({
     debug: true,
     disabled: false
   },
-  htmlValidator: {
-    usePrettier: false,
-    logLevel: 'verbose',
-    failOnError: false,
-    options: {
-      extends: [
-        'html-validate:document',
-        'html-validate:recommended',
-        'html-validate:standard'
-      ],
-      rules: {
-        'svg-focusable': 'off',
-        'no-unknown-elements': 'error',
-        // Conflicts or not needed as we use prettier formatting
-        'void-style': 'off',
-        'no-trailing-whitespace': 'off',
-        // Conflict with Nuxt defaults
-        'require-sri': 'off',
-        'attribute-boolean-style': 'off',
-        'doctype-style': 'off',
-        // Unreasonable rule
-        'no-inline-style': 'off'
-      }
-    }
-  },
+  // htmlValidator: {
+  //   usePrettier: false,
+  //   logLevel: 'verbose',
+  //   failOnError: false,
+  //   options: {
+  //     extends: [
+  //       'html-validate:document',
+  //       'html-validate:recommended',
+  //       'html-validate:standard'
+  //     ],
+  //     rules: {
+  //       'svg-focusable': 'off',
+  //       'no-unknown-elements': 'error',
+  //       // Conflicts or not needed as we use prettier formatting
+  //       'void-style': 'off',
+  //       'no-trailing-whitespace': 'off',
+  //       // Conflict with Nuxt defaults
+  //       'require-sri': 'off',
+  //       'attribute-boolean-style': 'off',
+  //       'doctype-style': 'off',
+  //       // Unreasonable rule
+  //       'no-inline-style': 'off'
+  //     }
+  //   }
+  // },
 
 })
