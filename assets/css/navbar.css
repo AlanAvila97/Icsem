@@ -94,7 +94,8 @@
     list-style: none;
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: auto;
+    gap: 2rem;
     margin-bottom: 0;
 }
 
@@ -109,6 +110,7 @@
     line-height: normal;
     text-transform: none;
     justify-content: space-evenly;
+    text-transform: capitalize;
 }
 .header .container-header .sections-nav .elements-nav li p{
     display: flex;

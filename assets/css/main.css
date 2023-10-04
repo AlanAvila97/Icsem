@@ -100,3 +100,9 @@ a{
     left: 0;
     z-index: 1030;
 }
+.router-link-active {
+    color: var(--green-logo-color);
+}
+.router-link-active:hover {
+    color: var(--green-logo-color);    
+}
