@@ -10,5 +10,7 @@
 
 </script>
 <style scoped>
-
+.link-active {
+    color: var(--green-logo-color);
+}
 </style>
