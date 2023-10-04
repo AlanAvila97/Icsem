@@ -161,7 +161,8 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 2rem 3rem;
+    padding: 3rem;
+    padding-bottom: 2rem;
 }
 .section-values .title-value h2{
     color: var(--Outer-color);
@@ -269,7 +270,7 @@
 .section-post-sell .container-post-sell .container-img-post-sell picture img{
     height: auto;
     width: 100%;
-    max-height: 480px;
+    max-height: 550px;
 }
 .section-post-sell .container-post-sell .info-post-sell{
     width: 50%;
@@ -321,7 +322,7 @@
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 3rem;
+    padding: 3rem 3rem;
 }
 .section-emails .container-emails .title-emails{
     justify-content: center;
@@ -768,8 +769,7 @@
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 2rem;
-    padding-bottom: 3rem;
+    padding: 3rem 2rem;
 }
 .section-products-services .container-products-services .title-products-services{
     justify-content: center;
