@@ -398,10 +398,10 @@
                 </div>
             </div> 
         </section>
-        <section class="section-emails">        
+        <section  class="section-emails">        
             <div class="container-emails d-flex">
                 <div class="title-emails w-100 d-flex">
-                    <h2>Contactanos</h2>
+                    <h2 id="Contactanos" >Contactanos</h2>
                 </div>
                 <div id="infoMail1" class="card-emails">
                     <div class="card-content">
@@ -468,68 +468,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="form-contactanos">
-                <div class="collapse " id="ContainerForm">
-                    <div class="container-contact d-flex">
-                        <div class="image-contact">
-                            <NuxtPicture
-                                src="images/conctanos.jpg"
-                                densities="x1 x2"
-                                preset="blog" 
-                                format="webp" 
-                                quality="90" 
-                                fit="cover" 
-                                preload
-                                :imgAttrs="{
-                                    id:'img-contactanos', 
-                                    class:'img-fluid ', 
-                                    style:'display:block', 
-                                    alt: 'Image',                                
-                                    title: 'Imagen',
-                                    'data-my-data': 'my-value'}"/>
-                        </div>
-                        <div class="info-contact d-flex">
-                            <form id="contactMail" class="form-contact">
-                                <p class="title">Register </p>
-                                <p class="message">Signup now and get full access to our app. </p>
-                                <label>
-                                    <span>Nombre Completo</span>
-                                    <input id="Nombre" name="" required placeholder type="text" class="input">
-                                </label>
-                                <div class="flex">                                                                                                    
-                                    <label class="w-50">
-                                        <span>Correo Electrónico</span>
-                                        <input id="Mail" name="" required="" placeholder="" type="email" class="input">
-                                    </label> 
-                                    <label class="w-50">
-                                        <span>Número de Celular</span>
-                                        <input id="Phone" name="" required="" placeholder="" type="email" class="input">
-                                    </label> 
-                                </div>  
-                                <div class="flex">                                                                                                    
-                                    <label class="w-50">
-                                        <span>Estado</span>
-                                        <select id="" name="" required  class="input select">
-                                            <option value="" selected>Elige opción</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                        </select>
-                                    </label> 
-                                    <label class="w-50">
-                                        <span>Empresa / Razón Social</span>
-                                        <input id="Company" name="" required="" placeholder="" type="email" class="input">
-                                    </label> 
-                                </div>  
-                                <label>
-                                    <span>Asunto</span>
-                                    <textarea id="" name="" class="input textarea" required="" cols="30" rows="10"></textarea>
-                                </label>                
-                                <button class="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>  
-                </div>                              
-            </div> -->
+
         </section>
         <section class="section-contact-general">
             <div class="container-contact-general d-flex">
@@ -558,7 +497,7 @@
         <section class="section-experience">
             <div class="container-experience d-flex">
                 <div class="title-experience d-flex">
-                    <h2>Titulo de Experiencia</h2>                    
+                    <h2 id="Experiencias">Titulo de Experiencia</h2>                    
                 </div>
                 <div class="content-items-experience">
                     <nuxt-link to="/productos/1" class="items-experience d-flex" arial-label="">                        
@@ -660,11 +599,21 @@
 <script setup>
     // Vue
     import { onMounted } from "vue";
+    // vue router
+    import { useRoute, useRouter } from "vue-router";
     // Import Swiper Vue.js components
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import { Pagination, Navigation, Mousewheel, Autoplay } from 'swiper/modules';
+    // Global Data (Pinia)
+    import {dataGlobal} from '@/store/globalData'
     // 
-    const modules =  [Navigation, Pagination, Mousewheel, Autoplay];
+    const DataGlobal = dataGlobal();   
+    const route = useRoute();
+    const router = useRouter();
+    // 
+    const { getElement, scrollSection } = DataGlobal; 
+    // 
+    const modules = [Navigation, Pagination, Mousewheel, Autoplay];
     // 
     function getInfoMail(e) {
         let id = e.target.dataset.id;
@@ -673,22 +622,16 @@
         let mail = getElement('#'+id+' .mail');
             // form.addC
             clickScroll();
-            // getElement('#').value = 'fidel@gmail.com';
+            // 
             getElement("#EmailIcsem").value = mail.innerText;
-
             setInfoForm(getElement('#contactGeneral .title'), title.innerText);
             setInfoForm(getElement('#contactGeneral .message'), desc.innerText);
             setInfoForm(getElement('#contactGeneral .mail'), mail.innerText);
-            console.log();
-            //  =  2;
     }
     function setInfoForm(element, text) {
         element.innerText = text;
     }
-    function getElement(element) {
-        return document.querySelector(element);
-    }
-        /**
+    /**
         * @description Funcion que hace un scroll al dar click a un elemento del nabvar (blog, podcast)
     */
     const clickScroll = (e) => {
@@ -700,22 +643,18 @@
             console.log('sa');
         }
     }
-    /**
-     * @description Función para hace un scroll a una seccion del index (Blog, Podcast)
-    */ 
-    const scrollSection = (element, numTop) => {
-        let scrollElement =  element.offsetTop;
-        let posicionElement = String(scrollElement - numTop);
-            window.scroll({
-                            top: posicionElement,
-                            behavior: 'smooth'
-                          });
-    }
+    onMounted(() => {     
+    }); 
 </script>
 
 <style scoped>
     h1{
         color: #fff;
     }
-
+    #Contactanos {
+        scroll-margin-block-start: 110px;
+        /*Adds margin to the top of the viewport*/
+        scroll-margin-block-end: 110px;
+        /*Adds margin to the bottom of the viewport*/
+    }
 </style>
