@@ -29,7 +29,32 @@
             </div><!-- End div logo -->
             <div class="sections-nav">
                 <ul class="elements-nav">
+                    <li>
+                        <nuxt-link to="/">
+                            Inicio
+                        </nuxt-link>
+                    </li>
                     <li>   
+                        <nuxt-link to="/productos/1">
+                            Productos
+                        </nuxt-link>
+                    </li>
+                    <li>   
+                        <nuxt-link to="/servicios/1">
+                            Servicios
+                        </nuxt-link>
+                    </li>
+                    <li>   
+                        <nuxt-link to="/contactanos">
+                            Contactanos
+                        </nuxt-link>
+                    </li>
+                    <li>   
+                        <nuxt-link to="/experiencia">
+                            Experiencia
+                        </nuxt-link>
+                    </li>
+                    <!-- <li>   
                         <nuxt-link to="/delay">
                             Delay
                         </nuxt-link>
@@ -39,16 +64,8 @@
                             color
                         </nuxt-link>
                     </li>
-                    <li>   
-                        <nuxt-link to="/contactanos">
-                            Contactanos
-                        </nuxt-link>
-                    </li>
-                    <li>   
-                        <nuxt-link to="/productos/1">
-                            Productos
-                        </nuxt-link>
-                    </li>
+
+ -->
                 </ul>
             </div><!-- End div sections nav -->
         </div>
