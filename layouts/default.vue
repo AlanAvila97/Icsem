@@ -1,5 +1,6 @@
 <template>
     <div>
+        <LoadingBar></LoadingBar>        
         <RedesSociales></RedesSociales>
         <NavbarView></NavbarView>
         <slot/>        
