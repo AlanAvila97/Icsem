@@ -1,0 +1,108 @@
+.img-loader {
+    width: max(250px, 350px);
+}
+.triangles {
+    transform: translate(-50%, -50%);
+    height   : auto;
+    width    : auto;
+    position : absolute;
+    left: 45%;
+    top: 33%;
+}
+
+.tri {
+    position     : absolute;
+    animation    : pulse_51 750ms ease-in infinite;
+    border-top   : 67px solid var(--mystic-color);
+    border-left  : 35px solid transparent;
+    border-right : 35px solid transparent;
+    border-bottom: 0px;
+}
+
+.tri.invert {
+    border-top   : 0px;
+    border-bottom: 67px solid var(--mystic-color);
+    border-left  : 35px solid transparent;
+    border-right : 35px solid transparent;
+}
+
+.tri:nth-child(1) {
+    left: 30px;
+}
+
+.tri:nth-child(2) {
+    left: -6px;
+    top: 68px;
+    animation-delay: -125ms;
+}
+
+.tri:nth-child(3) {
+    left: 30px;
+    top: 68px;
+}
+
+.tri:nth-child(4) {
+    left: 66px;
+    top: 68px;
+    animation-delay: -625ms;
+}
+
+.tri:nth-child(5) {
+    left: -42px;
+    top: 136px;
+    animation-delay: -250ms;
+}
+
+.tri:nth-child(6) {
+    left: -6px;
+    top: 136px;
+    animation-delay: -250ms;
+}
+
+.tri:nth-child(7) {
+    left: 30px;
+    top: 136px;
+    animation-delay: -375ms;
+}
+
+.tri:nth-child(8) {
+    left: 66px;
+    top: 136px;
+    animation-delay: -500ms;
+}
+
+.tri:nth-child(9) {
+    left: 102px;
+    top: 136px;
+    animation-delay: -500ms;
+}
+
+@media (max-width: 780px){
+    .triangles {
+        left: 40%;
+    }
+}
+@media (max-width: 550px){
+    .triangles {
+        left: 36%;
+    }
+}
+@media (max-width: 450px){
+    .triangles {
+        left: 34%;
+    }
+}
+
+@keyframes pulse_51 {
+    0% {
+        opacity: 1;
+    }
+
+    16.666% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
