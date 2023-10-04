@@ -41,7 +41,7 @@
                         <div class="container-info">
                             <h1>Titulo</h1>
                             <p>Subtitilo</p>
-                            <nuxt-link class="button" to="/">
+                            <nuxt-link class="button" to="/productos/1">
                                 <span class="button-icon-wrapper">
                                     <Icon name="ri:home-office-line" class="follow" />
                                     <Icon name="ri:home-office-line" class="follow-hover" />
@@ -72,7 +72,7 @@
                                 dignissimos itaque pariatur? Nemo dicta autem dignissimos sunt, voluptatem accusantium temporibus. 
                                 Vitae, tenetur corporis!
                             </p>
-                            <nuxt-link class="button" to="/">
+                            <nuxt-link class="button" to="/productos/1">
                                 <span class="button-icon-wrapper">
                                     <Icon name="ri:home-office-line" class="follow" />
                                     <Icon name="ri:home-office-line" class="follow-hover" />
@@ -99,7 +99,7 @@
                         <div class="container-info">
                             <h1>Titulo</h1>
                             <p>Subtitilo</p>
-                            <nuxt-link class="button" to="/">
+                            <nuxt-link class="button" to="/productos/1">
                                 <span class="button-icon-wrapper">
                                     <Icon name="ri:home-office-line" class="follow" />
                                     <Icon name="ri:home-office-line" class="follow-hover" />
@@ -212,7 +212,7 @@
                     <h2>Titulo Productos Servicios</h2>
                 </div>
                 <div class="content-items-products-services d-grid w-100">
-                    <nuxt-link to="/" class="items-products-services d-flex" aria-label="Redirección">
+                    <nuxt-link to="/productos/1" class="items-products-services d-flex" aria-label="Redirección">
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
@@ -257,7 +257,7 @@
                             </p>    
                         </div>   
                     </nuxt-link>
-                    <nuxt-link to="/" class="items-products-services" aria-label="Redirección">
+                    <nuxt-link to="/productos/1" class="items-products-services" aria-label="Redirección">
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-4.jpg"
@@ -302,7 +302,7 @@
                             </p>    
                         </div>    
                     </nuxt-link>
-                    <nuxt-link to="/" class="items-products-services" aria-label="Redirección">
+                    <nuxt-link to="/productos/1" class="items-products-services" aria-label="Redirección">
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-5.jpg"
@@ -403,12 +403,21 @@
                 <div class="title-emails w-100 d-flex">
                     <h2>Contactanos</h2>
                 </div>
-                <div class="card-emails">
+                <div id="infoMail1" class="card-emails">
                     <div class="card-content">
-                        <div class="card-title">Cool Card</div>
+                        <div class="card-title">Contacto 1</div>
                         <p class="card-description">This is a cool card design.</p>
                         <p class="mail">demo@prueba.com</p>
-                        <button class="card-button" type="button" @click="clickScroll" data-bs-toggle="collapse" data-bs-target="#ContainerForm" aria-expanded="false" aria-controls="ContainerForm">Click Me</button>
+                        <button id="btn1"
+                                class="card-button" type="button" 
+                                @click="getInfoMail" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#ContainerForm" 
+                                data-id="infoMail1"
+                                aria-expanded="false" 
+                                aria-controls="ContainerForm">
+                                Click Me
+                        </button>
                     </div>
                     <div class="icon-box">
                         <span class="icon d-flex">
@@ -416,12 +425,21 @@
                         </span>
                     </div>
                 </div>
-                <div class="card-emails">
+                <div id="infoMail2" class="card-emails">
                     <div class="card-content">
-                        <div class="card-title">Cool Card</div>
+                        <div class="card-title">Contacto 2</div>
                         <p class="card-description">This is a cool card design.</p>
-                        <p class="mail">demo@prueba.com</p>
-                        <button class="card-button">Click Me</button>
+                        <p class="mail">demo1@prueba.com</p>
+                        <button id="btn2"
+                                class="card-button" type="button" 
+                                @click="getInfoMail" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#ContainerForm" 
+                                data-id="infoMail2"
+                                aria-expanded="false" 
+                                aria-controls="ContainerForm">
+                            Click Me
+                        </button>
                     </div>
                     <div class="icon-box">
                         <span class="icon d-flex">
@@ -429,12 +447,19 @@
                         </span>
                     </div>
                 </div>
-                <div class="card-emails">
+                <div id="infoMail3" class="card-emails">
                     <div class="card-content">
-                        <div class="card-title">Cool Card</div>
+                        <div class="card-title">Contacto 3</div>
                         <p class="card-description">This is a cool card design.</p>
-                        <p class="mail">demo@prueba.com</p>
-                        <button class="card-button">Click Me</button>
+                        <p class="mail">demo2@prueba.com</p>
+                        <button id="btn3"
+                                class="card-button" type="button" 
+                                @click="getInfoMail"  
+                                data-id="infoMail3"
+                                aria-expanded="false" 
+                                aria-controls="ContainerForm">
+                                Click Me
+                        </button>
                     </div>
                     <div class="icon-box">
                         <span class="icon d-flex">
@@ -443,8 +468,8 @@
                     </div>
                 </div>
             </div>
-            <div class="form-contactanos">
-                <div class="collapse" id="ContainerForm">
+            <!-- <div class="form-contactanos">
+                <div class="collapse " id="ContainerForm">
                     <div class="container-contact d-flex">
                         <div class="image-contact">
                             <NuxtPicture
@@ -464,37 +489,70 @@
                                     'data-my-data': 'my-value'}"/>
                         </div>
                         <div class="info-contact d-flex">
-                            <form class="form-contact">
+                            <form id="contactMail" class="form-contact">
                                 <p class="title">Register </p>
                                 <p class="message">Signup now and get full access to our app. </p>
-                                <div class="flex">
-                                    <label>
-                                        <input required="" placeholder="" type="text" class="input">
-                                        <span>Firstname</span>
-                                    </label>
-                            
-                                    <label>
-                                        <input required="" placeholder="" type="text" class="input">
-                                        <span>Lastname</span>
-                                    </label>
+                                <label>
+                                    <span>Nombre Completo</span>
+                                    <input id="Nombre" name="" required placeholder type="text" class="input">
+                                </label>
+                                <div class="flex">                                                                                                    
+                                    <label class="w-50">
+                                        <span>Correo Electrónico</span>
+                                        <input id="Mail" name="" required="" placeholder="" type="email" class="input">
+                                    </label> 
+                                    <label class="w-50">
+                                        <span>Número de Celular</span>
+                                        <input id="Phone" name="" required="" placeholder="" type="email" class="input">
+                                    </label> 
+                                </div>  
+                                <div class="flex">                                                                                                    
+                                    <label class="w-50">
+                                        <span>Estado</span>
+                                        <select id="" name="" required  class="input select">
+                                            <option value="" selected>Elige opción</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                        </select>
+                                    </label> 
+                                    <label class="w-50">
+                                        <span>Empresa / Razón Social</span>
+                                        <input id="Company" name="" required="" placeholder="" type="email" class="input">
+                                    </label> 
                                 </div>  
                                 <label>
-                                    <input required="" placeholder="" type="email" class="input">
-                                    <span>Email</span>
-                                </label> 
-                                <label>
-                                    <input required="" placeholder="" type="password" class="input">
-                                    <span>Password</span>
-                                </label>
-                                <label>
-                                    <input required="" placeholder="" type="password" class="input">
-                                    <span>Confirm password</span>
-                                </label>
+                                    <span>Asunto</span>
+                                    <textarea id="" name="" class="input textarea" required="" cols="30" rows="10"></textarea>
+                                </label>                
                                 <button class="submit">Submit</button>
                             </form>
                         </div>
                     </div>  
                 </div>                              
+            </div> -->
+        </section>
+        <section class="section-contact-general">
+            <div class="container-contact-general d-flex">
+                <div class="image-contact">
+                    <NuxtPicture
+                        src="images/conctanos.jpg"
+                        densities="x1 x2"
+                        preset="blog" 
+                        format="webp" 
+                        quality="90" 
+                        fit="cover" 
+                        preload
+                        :imgAttrs="{
+                            id:'img-contactanos', 
+                            class:'img-fluid ', 
+                            style:'display:block', 
+                            alt: 'Image',                                
+                            title: 'Imagen',
+                            'data-my-data': 'my-value'}"/>
+                </div>
+                <div class="info-contact d-flex">
+                    <FormContact></FormContact>
+                </div>
             </div>
         </section>
         <section class="section-experience">
@@ -503,7 +561,7 @@
                     <h2>Titulo de Experiencia</h2>                    
                 </div>
                 <div class="content-items-experience">
-                    <nuxt-link to="/" class="items-experience d-flex" arial-label="">                        
+                    <nuxt-link to="/productos/1" class="items-experience d-flex" arial-label="">                        
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
@@ -533,7 +591,7 @@
                             </p>  
                         </div>
                     </nuxt-link>
-                    <nuxt-link to="/" class="items-experience d-flex">
+                    <nuxt-link to="/productos/1" class="items-experience d-flex">
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-4.jpg"
@@ -563,7 +621,7 @@
                             </p>  
                         </div>
                     </nuxt-link>
-                    <nuxt-link to="/" class="items-experience d-flex">
+                    <nuxt-link to="/productos/1" class="items-experience d-flex">
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-5.jpg"
@@ -608,6 +666,51 @@
     // 
     const modules =  [Navigation, Pagination, Mousewheel, Autoplay];
     // 
+    function getInfoMail(e) {
+        let id = e.target.dataset.id;
+        let title = getElement('#'+id+' .card-title');
+        let desc = getElement('#'+id+' .card-description');
+        let mail = getElement('#'+id+' .mail');
+            // form.addC
+            clickScroll();
+            // getElement('#').value = 'fidel@gmail.com';
+            getElement("#EmailIcsem").value = mail.innerText;
+
+            setInfoForm(getElement('#contactGeneral .title'), title.innerText);
+            setInfoForm(getElement('#contactGeneral .message'), desc.innerText);
+            setInfoForm(getElement('#contactGeneral .mail'), mail.innerText);
+            console.log();
+            //  =  2;
+    }
+    function setInfoForm(element, text) {
+        element.innerText = text;
+    }
+    function getElement(element) {
+        return document.querySelector(element);
+    }
+        /**
+        * @description Funcion que hace un scroll al dar click a un elemento del nabvar (blog, podcast)
+    */
+    const clickScroll = (e) => {
+        let element = getElement('#contactGeneral');
+        let page = document.querySelector('main.index');
+        if(page != null){
+            scrollSection(element, 90);
+        }else{
+            console.log('sa');
+        }
+    }
+    /**
+     * @description Función para hace un scroll a una seccion del index (Blog, Podcast)
+    */ 
+    const scrollSection = (element, numTop) => {
+        let scrollElement =  element.offsetTop;
+        let posicionElement = String(scrollElement - numTop);
+            window.scroll({
+                            top: posicionElement,
+                            behavior: 'smooth'
+                          });
+    }
 </script>
 
 <style scoped>
