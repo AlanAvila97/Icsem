@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Trebuchet MS 2", Tahoma, sans-serif;
-    z-index: 2;    
+    z-index: 1;    
 }
 :root {
     --catskill-color: #f5f7fa;
@@ -26,8 +26,10 @@ body{
     background: var(--mystic-color);
     height: 100vh;
     height: 100%;
+    overflow: hidden;
     width: 100%;
     z-index: 2;
+
 }
 body::after {
     content: "";
@@ -105,4 +107,10 @@ a{
 }
 .router-link-active:hover {
     color: var(--green-logo-color);    
+}
+.overflow-auto{
+    overflow: auto;
+}
+.visibility-hidden{
+    visibility: hidden;
 }
