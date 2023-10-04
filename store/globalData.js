@@ -1,7 +1,21 @@
 import {defineStore} from 'pinia'
 // 
-export const dataJsonList = defineStore('dataJsonList', () => {
+export const dataGlobal = defineStore('dataGlobal', () => {
     // data reactiva
+    function getElement(element) {
+        return document.querySelector(element);
+    }
+    /**
+     * @description Función para hace un scroll a una seccion del index (Blog, Podcast)
+    */ 
+    const scrollSection = (element, numTop) => {
+        let scrollElement =  element.offsetTop;
+        let posicionElement = String(scrollElement - numTop);
+            window.scroll({
+                            top: posicionElement,
+                            behavior: 'smooth'
+                            });
+    }
     const parseoTexto = (cadena) => {
         let txt = String(cadena);
         let textParser = txt.replaceAll(' ', '-');
@@ -30,5 +44,8 @@ export const dataJsonList = defineStore('dataJsonList', () => {
         }, 1500);   
     }
     return{
+        getElement,
+        scrollSection,
+        eliminarCaracteres,
     }
 });
